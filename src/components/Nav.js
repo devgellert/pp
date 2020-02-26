@@ -6,7 +6,7 @@ export class Nav extends Component {
     render() {
         return (
             <nav>
-                <h2>Szállás</h2>
+                <h2>Pelso Porta</h2>
                 <div>
                     <ul>
                         <li>+36 798 3212</li>

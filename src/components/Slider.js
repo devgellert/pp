@@ -35,7 +35,7 @@ export class Slider extends Component {
                 <div 
                 className="slider-current hide-slide" 
                 style={{backgroundImage: `url(${this.state.pictures[this.state.index]})`}}
-                on
+                
                 >
                     </div>
                 </section>

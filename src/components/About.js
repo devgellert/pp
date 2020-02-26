@@ -9,8 +9,10 @@ export class About extends Component {
     render() {
         
         return (
+            <div>
             <section id="about-wrapper">
                 <h1>Szolgáltatásaink</h1>
+                <div className="horizontal-half-line"></div>
                 <Tabs>
                     <TabList>
                         <Tab>Szobák</Tab>
@@ -38,7 +40,21 @@ export class About extends Component {
                     </TabPanel>
                 </Tabs>
 
-            </section>
+                
+                </section>
+                <div id="why-wrapper">
+                    <div>
+                        <h2>Miárt válassza szárszót?</h2>
+                        <ul>
+                            <li>asdsadsa</li>
+                            <li>asdsadsa</li>
+                            <li>asdsadsa</li>
+                            <li>asdsadsa</li>
+                        </ul>
+                    </div>
+                    
+                </div>
+            </div>
         );
     }
 }

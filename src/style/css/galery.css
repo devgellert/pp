@@ -1,0 +1,31 @@
+#galery-wrapper {
+  width: 100%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+#galery-wrapper div {
+  width: 1000px;
+  height: 400px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+#galery-wrapper div img {
+  width: 30%;
+  height: auto;
+}
+#galery-wrapper div button {
+  position: absolute;
+  width: 250px;
+  height: 70px;
+  left: calc(50% - 125px);
+  bottom: 0;
+  cursor: pointer;
+  background-color: #70bef5;
+  border-radius: 10px 0;
+}
+
+/*# sourceMappingURL=galery.css.map */

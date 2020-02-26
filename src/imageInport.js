@@ -1,0 +1,20 @@
+import p1 from './images/1.jpg';
+import p2 from './images/2.jpg';
+import p3 from './images/3.jpg';
+import p4 from './images/4.jpg';
+import p5 from './images/5.jpg';
+import p6 from './images/6.jpg';
+import p7 from './images/7.jpg';
+import p8 from './images/8.jpg';
+import p9 from './images/9.jpg';
+import p10 from './images/10.jpg';
+import p11 from './images/11.jpg';
+import p12 from './images/12.jpg';
+import p13 from './images/13.jpg';
+import p14 from './images/14.jpg';
+import p15 from './images/15.jpg';
+import p16 from './images/16.jpg';
+import p17 from './images/17.jpg';
+import p18 from './images/18.jpg';
+
+export default [p1, p2, p3, p4, p5, p6 ,p7,p8,p9,p10,p11, p12, p13, p14, p15, p16, p17, p18];

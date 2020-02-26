@@ -1,6 +1,12 @@
 #about-wrapper
     width: 1000px
-    margin: 100px auto
+    margin: 150px auto
+    font-family: 'Raleway', sans-serif
+    .horizontal-half-line
+      width: 50%
+      height: 0
+      border-bottom: 1px solid grey
+      margin: 20px auto
     h1
         text-align: center
         font-size: 3rem
@@ -8,24 +14,47 @@
         border-bottom: 1px solid lightgrey
         width: 100%
         margin: 0 auto
+
+
+  
+#why-wrapper
+  margin-top: 100px
+  width: 100%
+  min-height: 400px
+  background-color: rgba(13, 117, 191, 1)
+  display: flex
+  justify-content: center
+  align-items: center
+  color: white
+  div
+    width: 1000px
+    height: 300px
+    h2
+      text-align: center
 .react-tabs__tab-list 
-  border-bottom: 1px solid #aaa
-  margin: 0 0 10px
+  display: flex
+  justify-content: center
+  align-items: center
   padding: 0
+  
 .react-tabs__tab 
   display: inline-block
   border: 1px solid transparent
+  
   border-bottom: none
   bottom: -1px
   position: relative
   list-style: none
   padding: 6px 12px
   cursor: pointer
+  transition: 0.6s
 .react-tabs__tab--selected 
-  background: rgba(99, 156, 247, 1)
+  // background: rgba(99, 156, 247, 1)
   border-color: #aaa
   color: black
   border-radius: 5px 5px 0 0
+  background-color: white
+
 
 .react-tabs__tab--disabled 
     color: GrayText
@@ -35,6 +64,7 @@
     box-shadow: 0 0 5px hsl(208, 99%, 50%)
     border-color: hsl(208, 99%, 50%)
     outline: none
+    
 
 .react-tabs__tab:focus:after 
   content: ""
@@ -49,3 +79,21 @@
   display: none
 .react-tabs__tab-panel--selected
   display: block
+  min-height: 300px
+  background-color: white
+  padding: 50px
+  box-sizing: border-box
+  border-radius: 2px
+  border: 1px solid black
+
+
+@media screen and ( max-width: 1000px )
+  #about-wrapper
+    width: 100%
+    h1
+      font-size: 1rem
+  .react-tabs__tab-list 
+    flex-direction: column
+  #why-wrapper
+    div
+      width: 500px

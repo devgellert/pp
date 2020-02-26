@@ -34,5 +34,10 @@
     opacity: 0;
   }
 }
+@media screen and (max-width: 500px) {
+  #slider-wrapper {
+    display: none;
+  }
+}
 
 /*# sourceMappingURL=slider.css.map */
