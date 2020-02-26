@@ -23,6 +23,7 @@
   margin-top: 100px;
   width: 100%;
   min-height: 400px;
+  height: auto;
   background-color: #0d75bf;
   display: flex;
   justify-content: center;
@@ -31,7 +32,7 @@
 }
 #why-wrapper div {
   width: 1000px;
-  height: 300px;
+  height: auto;
 }
 #why-wrapper div h2 {
   text-align: center;

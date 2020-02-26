@@ -22,20 +22,28 @@ export class About extends Component {
                     </TabList>
 
                     <TabPanel>
-                        <p>75 m2 alapterületű, 1 háló szobával (3fő) + 1 nyitott galériával (3fő), nagy nappalival, étkezővel, teljesen felszerelt konyhával, fürdőszobával rendelkezik</p>
+                        <p>Etiam gravida varius enim in lacinia. Suspendisse sed euismod tortor, et tempor massa. Sed non lorem fermentum, semper turpis at, consequat tortor. Sed vitae eros ultrices, mattis lacus at, aliquet justo. Donec condimentum elit libero, eget mattis nibh fermentum at. Mauris tincidunt turpis eu justo scelerisque, et interdum orci consectetur. Suspendisse potenti. Sed fringilla placerat rhoncus. In luctus turpis non tellus bibendum, ultrices suscipit leo venenatis. Donec varius tempus nulla, et volutpat orci. Sed condimentum, nibh at aliquet tristique, tortor nibh commodo tellus, a consequat ex sapien vel est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus in rutrum ligula, nec gravida nisi.</p>
                     
                     </TabPanel>
                     <TabPanel>
+                        <p>
+                            Etiam gravida varius enim in lacinia. Suspendisse sed euismod tortor, et tempor massa. Sed non lorem fermentum, semper turpis at, consequat tortor. Sed vitae eros ultrices, mattis lacus at, aliquet justo. Donec condimentum elit libero, eget mattis nibh fermentum at. Mauris tincidunt turpis eu justo scelerisque, et interdum orci consectetur. Suspendisse potenti. Sed fringilla placerat rhoncus. In luctus turpis non tellus bibendum, ultrices suscipit leo venenatis. Donec varius tempus nulla, et volutpat orci. Sed condimentum, nibh at aliquet tristique, tortor nibh commodo tellus, a consequat ex sapien vel est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus in rutrum ligula, nec gravida nisi.
+                        </p>
                     </TabPanel>
                     <TabPanel>
-                        <p>A lakáshoz külön terasz tartozik, nagy zárt és parkosított udvarral ahol kiváló lehetőség nyílik különböző szabadidős programokhoz felnőttek és gyermekek részére egyaránt</p>
+                        <p>
+                        Etiam gravida varius enim in lacinia. Suspendisse sed euismod tortor, et tempor massa. Sed non lorem fermentum, semper turpis at, consequat tortor. Sed vitae eros ultrices, mattis lacus at, aliquet justo. Donec condimentum elit libero, eget mattis nibh fermentum at. Mauris tincidunt turpis eu justo scelerisque, et interdum orci consectetur. Suspendisse potenti. Sed fringilla placerat rhoncus. In luctus turpis non tellus bibendum, ultrices suscipit leo venenatis. Donec varius tempus nulla, et volutpat orci. Sed condimentum, nibh at aliquet tristique, tortor nibh commodo tellus, a consequat ex sapien vel est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus in rutrum ligula, nec gravida nisi.
+                        </p>
+                        <p>
+                        Etiam gravida varius enim in lacinia. Suspendisse sed euismod tortor, et tempor massa. Sed non lorem fermentum, semper turpis at, consequat tortor. Sed vitae eros ultrices, mattis lacus at, aliquet justo. Donec condimentum elit libero, eget mattis nibh fermentum at. Mauris tincidunt turpis eu justo scelerisque, et interdum orci consectetur. Suspendisse potenti. Sed fringilla placerat rhoncus. In luctus turpis non tellus bibendum, ultrices suscipit leo venenatis. Donec varius tempus nulla, et volutpat orci. Sed condimentum, nibh at aliquet tristique, tortor nibh commodo tellus, a consequat ex sapien vel est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus in rutrum ligula, nec gravida nisi.
+                        </p>
                     </TabPanel>
                     <TabPanel>
                         <ul>
-                            <li>Ingyenes parkolás</li>
-                            <li>Balatoni strand 200m-re</li>
-                            <li>Ingyenes WIFI</li>
-                            <li>Fagylaltozó 200m-re</li>
+                            <li>Etiam gravida varius enim in lacinia. Suspendisse sed euismod tortor, et tempor massa. Sed non lorem fermentum, semper turpis at, consequat tortor.</li>
+                            <li>Nam commodo felis pretium, facilisis est et, feugiat arcu. Nulla tincidunt placerat quam id consequat. Vestibulum sodales eleifend malesuada. Fusce feugiat mauris enim, ac consectetur quam ullamcorper vel. Nunc id cursus eros. Quisque porta risus risus, quis rutrum mi consectetur eget. Nullam ut tempor nisl, sit amet hendrerit tellus. Quisque faucibus cursus volutpat.</li>
+                            <li>Etiam gravida varius enim in lacinia. Suspendisse sed euismod tortor, et tempor massa. Sed non lorem fermentum, semper turpis at, consequat tortor.</li>
+                            <li>Nam commodo felis pretium, facilisis est et, feugiat arcu. Nulla tincidunt placerat quam id consequat. Vestibulum sodales eleifend malesuada. Fusce feugiat mauris enim, ac consectetur quam ullamcorper vel. Nunc id cursus eros. Quisque porta risus risus, quis rutrum mi consectetur eget. Nullam ut tempor nisl, sit amet hendrerit tellus. Quisque faucibus cursus volutpat.</li>
                         </ul>
                     </TabPanel>
                 </Tabs>
@@ -44,12 +52,12 @@ export class About extends Component {
                 </section>
                 <div id="why-wrapper">
                     <div>
-                        <h2>Miárt válassza szárszót?</h2>
+                        <h2>Lorem ipsum?</h2>
                         <ul>
-                            <li>asdsadsa</li>
-                            <li>asdsadsa</li>
-                            <li>asdsadsa</li>
-                            <li>asdsadsa</li>
+                            <li>Nam commodo felis pretium, facilisis est et, feugiat arcu. Nulla tincidunt placerat quam id consequat. Vestibulum sodales eleifend malesuada. Fusce feugiat mauris enim, ac consectetur quam ullamcorper vel. Nunc id cursus eros. Quisque porta risus risus, quis rutrum mi consectetur eget. Nullam ut tempor nisl, sit amet hendrerit tellus. Quisque faucibus cursus volutpat.</li>
+                            <li>                            Etiam gravida varius enim in lacinia. Suspendisse sed euismod tortor, et tempor massa. Sed non lorem fermentum, semper turpis at, consequat tortor. Sed vitae eros ultrices, mattis lacus at, aliquet justo. Donec condimentum elit libero, eget mattis nibh fermentum at. Mauris tincidunt turpis eu justo scelerisque, et interdum orci consectetur. Suspendisse potenti. Sed fringilla placerat rhoncus. In luctus turpis non tellus bibendum, ultrices suscipit leo venenatis. Donec varius tempus nulla, et volutpat orci. Sed condimentum, nibh at aliquet tristique, tortor nibh commodo tellus, a consequat ex sapien vel est. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Vivamus in rutrum ligula, nec gravida nisi.
+</li>
+                            <li>Nam commodo felis pretium, facilisis est et, feugiat arcu. Nulla tincidunt placerat quam id consequat. Vestibulum sodales eleifend malesuada. Fusce feugiat mauris enim, ac consectetur quam ullamcorper vel. Nunc id cursus eros. Quisque porta risus risus, quis rutrum mi consectetur eget. Nullam ut tempor nisl, sit amet hendrerit tellus. Quisque faucibus cursus volutpat.</li>
                         </ul>
                     </div>
                     
