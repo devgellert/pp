@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import BookingField from './BookingField';
 import '../style/css/book.css';
 
 export class BookingSection extends Component {

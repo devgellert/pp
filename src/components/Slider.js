@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-import {Spring} from 'react-spring/renderprops'
 import '../style/css/slider.css';
 import slide1 from '../images/1.jpg'
 import slide2 from '../images/2.jpg'

@@ -9,9 +9,9 @@ export class Galery extends Component {
         return (
             <div id="galery-wrapper">
                 <div>
-                    <img src={img3}/>
-                    <img src={img8}/>
-                    <img src={img10}/>
+                    <img alt="img3" src={img3}/>
+                    <img alt="img8" src={img8}/>
+                    <img alt="img10" src={img10}/>
                     <button>További képek</button>
                 </div>
                 

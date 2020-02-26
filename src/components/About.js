@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import '../style/css/about.css';
-import { Route, BrowserRouter as Router, Switch, Link} from 'react-router-dom';
 import { Tab, Tabs, TabList, TabPanel } from 'react-tabs';
 
 export class About extends Component {

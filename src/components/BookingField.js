@@ -34,7 +34,6 @@ export class BookingField extends Component {
                 day: undefined
             },
             name: '',
-            person: 2,
             phone: '',
             email: '',
             active: false
@@ -47,6 +46,7 @@ export class BookingField extends Component {
         this.handleInput = handleInput.bind(this);
         this.toggleActive = toggleActive.bind(this);
         this.validInputs = validInputs.bind(this);
+        this.setDepartureMonthOptions = setDepartureMonthOptions.bind(this);
     }
     render() {
         return (
@@ -67,29 +67,24 @@ export class BookingField extends Component {
                             />
                             
                             <Select
-                            isDisabled = { !this.state.arrival.year ? true : false }
-                            options={this.state.options.arrivals.months}
-                            className="select"
-                            placeholder="Month"
-                            onChange = {data => {
-                                this.handleChange(data);
-                                setTimeout(() => {
-                                    this.state.options.arrivals.days = this.getSaturdays(this.state.arrival.year, this.state.arrival.month, 'arrival');
-                                    this.setState(this.state);
-                                    setDepartureMonthOptions.bind(this)();
-                                }, 1);
+                                isDisabled = { !this.state.arrival.year ? true : false }
+                                options={this.state.options.arrivals.months}
+                                className="select"
+                                placeholder="Month"
+                                onChange = {data => {
+                                    this.handleChange(data);
+                                    this.setDepartureMonthOptions();
                             }}
 
                             />
                             <Select
-                            isDisabled = { !(this.state.arrival.year && this.state.arrival.month) ? true : false }
-                            className="select"
-                            placeholder="Day"
-                            onChange={data => {
-                                this.handleChange(data);
-                            }}
-                            
-                            options={this.state.options.arrivals.days}
+                                isDisabled = { !(this.state.arrival.year && this.state.arrival.month) ? true : false }
+                                className="select"
+                                placeholder="Day"
+                                onChange={data => {
+                                    this.handleChange(data);
+                                }}
+                                options={this.state.options.arrivals.days}
                             />
                         </div>
                         

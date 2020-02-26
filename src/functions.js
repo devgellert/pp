@@ -1,11 +1,10 @@
-import Axios from "axios";
 
 export function getSaturdays(year, month, option) {
     const n = new Date(year, month, 0).getDate();
     let saturdays = [];
 
 
-    if (option === 'departure' && this.state.arrival.month == this.state.departure.month) {
+    if (option === 'departure' && this.state.arrival.month === this.state.departure.month) {
 
 
         for (let i = 1; i <= n; i++) {
@@ -24,7 +23,7 @@ export function getSaturdays(year, month, option) {
     }else {
         for (let i = 1; i <= n; i++) {
             let day = new Date(year, month, i);
-            if(day.getDay() == 6) {
+            if(day.getDay() === 6) {
                 
                 saturdays.push({
                         value: day.getDate(),
@@ -114,7 +113,8 @@ export function handleChange(data) {
             this.state.departure.year = data.value;
             return this.setState(this.state);
         case 'arrivalMonth':
-            this.state.arrival.month = data.value
+            this.state.arrival.month = data.value;
+            this.state.options.arrivals.days = this.getSaturdays(this.state.arrival.year, this.state.arrival.month, 'arrival');
             return this.setState(this.state);
         case 'arrivalDay':
             return this.setState({
