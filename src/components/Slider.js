@@ -25,7 +25,10 @@ export class Slider extends Component {
     }
 
     componentDidMount() {
-        setInterval(() => this.nextBackground(this.state.index), 3000);
+        this.interval = setInterval(() => this.nextBackground(this.state.index), 3000);
+    }
+    componentWillMount() {
+        clearInterval(this.interval);
     }
 
     render() {

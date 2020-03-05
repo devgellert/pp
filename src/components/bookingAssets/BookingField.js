@@ -1,16 +1,17 @@
 import React, { Component } from 'react';
-import '../style/css/book.css';
-import { validInputs ,toggleActive, readyToSubmit, getSaturdays, getThisAndNextYear, setArrivalMonthOptions, handleChange, handleInput, setDepartureMonthOptions } from '../functions';
+import '../../style/css/book.css';
+import { validInputs , readyToSubmit, getSaturdays, getThisAndNextYear, setArrivalMonthOptions, handleChange, handleInput, setDepartureMonthOptions } from '../../functions';
 import Select from 'react-select';
-import axios from 'axios';
+import { setBookData } from '../../redux/actions/bookActions';
+import { connect } from 'react-redux';
+import { Link } from 'react-router-dom';
+
 
 export class BookingField extends Component {
-    
     constructor(props) {
         super(props);
-       
         this.state = {
-            person: 2,
+            
             options: {
                 arrivals: {
                     years: getThisAndNextYear('arrival'),
@@ -32,11 +33,7 @@ export class BookingField extends Component {
                 year: undefined,
                 month: undefined,
                 day: undefined
-            },
-            name: '',
-            phone: '',
-            email: '',
-            active: false
+            }
         }
         this.getSpecificMonths = setDepartureMonthOptions.bind(this);  
         this.getSaturdays = getSaturdays.bind(this);
@@ -44,10 +41,10 @@ export class BookingField extends Component {
         this.setArrivalMonthOptions = setArrivalMonthOptions.bind(this);
         this.readyToSubmit = readyToSubmit.bind(this); 
         this.handleInput = handleInput.bind(this);
-        this.toggleActive = toggleActive.bind(this);
         this.validInputs = validInputs.bind(this);
         this.setDepartureMonthOptions = setDepartureMonthOptions.bind(this);
     }
+
     render() {
         return (
             <section id="booking-field">
@@ -58,7 +55,7 @@ export class BookingField extends Component {
                             <Select
                                 name="arrivalYear"
                                 className="select"
-                                placeholder="Select year"
+                                placeholder="Érkezés éve*"
                                 options={this.state.options.arrivals.years}
                                 onChange={ data => {
                                     this.handleChange(data);
@@ -70,7 +67,7 @@ export class BookingField extends Component {
                                 isDisabled = { !this.state.arrival.year ? true : false }
                                 options={this.state.options.arrivals.months}
                                 className="select"
-                                placeholder="Month"
+                                placeholder="Érkezés hónapja*"
                                 onChange = {data => {
                                     this.handleChange(data);
                                     this.setDepartureMonthOptions();
@@ -80,7 +77,7 @@ export class BookingField extends Component {
                             <Select
                                 isDisabled = { !(this.state.arrival.year && this.state.arrival.month) ? true : false }
                                 className="select"
-                                placeholder="Day"
+                                placeholder="Érkezés napja*"
                                 onChange={data => {
                                     this.handleChange(data);
                                 }}
@@ -99,10 +96,8 @@ export class BookingField extends Component {
                                 name="departureYear"
                                 isDisabled
                                 className="select"
-                                placeholder={this.state.departure.year}
+                                placeholder={this.state.departure.year || "Távozás éve*"}
                                 options={this.state.options.arrivals.years}
-                                isSearchable
-                                
                                 onChange={
                                     data => {
                                     this.handleChange(data);
@@ -113,7 +108,7 @@ export class BookingField extends Component {
                             isDisabled = { !(this.state.arrival.year && this.state.arrival.month && this.state.arrival.day && this.state.departure.year) ? true : false }
                             options={this.state.options.departures.months}
                             className="select"
-                            placeholder="Hónap"
+                            placeholder="Távozás hónapja*"
                             
                             onChange = {data => {
                                 this.handleChange(data);
@@ -134,7 +129,7 @@ export class BookingField extends Component {
                             <Select
                             isDisabled = { !(this.state.departure.year && this.state.departure.month && this.state.arrival.day) ? true : false }
                             className="select"
-                            placeholder="Nap"
+                            placeholder="Távozás napja*"
                             onChange={
                                 data => this.handleChange(data)
                             }
@@ -146,72 +141,48 @@ export class BookingField extends Component {
                     </div>
                     <div className="vertical-line"></div>
                     <div className="booking-section">
-                        <button 
-                        onClick={e => this.toggleActive(e)}
-                        > {this.readyToSubmit() ? 'FOGLALÁS >' : 'TÖLTSE KI'}</button>
+                        <Link to="/book">
+                        <button type="button" 
+                            onClick={e => {
+                                if(this.readyToSubmit()) {
+                                    this.props.setBookData({
+                                        arrival: {
+                                            year: this.state.arrival.year,
+                                            month: this.state.arrival.month,
+                                            day: this.state.arrival.day,
+                                        },
+                                        departure: {
+                                            year: this.state.departure.year,
+                                            month: this.state.departure.month,
+                                            day: this.state.departure.day,
+                                        }
+                                        })  
+                                    }
+                                    
+                            }
+                            }   
+                        >
+                        Foglalás
+                        </button>
+                        </Link>
                     </div>
                     
                 </form>
-                    <div className={this.state.active ? 'display' : 'hide'} id="final-booking">
                     
-                            <form id="other-info">
-                                <span
-                                onClick={e => this.toggleActive(e)}
-                                >&#10006;</span>
-                                <div>
-                                    <b>Érkezés dátuma:</b>
-                                    <p>{this.state.arrival.year + '.' + this.state.arrival.month + '.' + this.state.arrival.day}</p>
-                                    <b>Távozás dátuma:</b>
-                                    <p>{this.state.departure.year + '.' + this.state.departure.month + '.' + this.state.departure.day}</p>
-                                    <b>Név:</b> <br/>
-                                    <input
-                                        onChange={e => this.handleInput(e)}
-                                        name='name'
-                                        value={this.state.name}
-                                        type="text"/><br/>
-                                    <b>Személyek száma:</b> <br/>
-                                    <input
-                                        onChange={e => this.handleInput(e)}
-                                        name='person'
-                                        value={this.state.person}
-                                        type="text"/><br/>
-                                    <b>Telefonszám:</b> <br/>
-                                    <input
-                                        onChange={e => this.handleInput(e)}
-                                        name='phone'
-                                        value={this.state.phone}
-                                        type="tel"/><br/>
-                                        <p>{this.state.phone}</p>
-                                    <b>E-mail:</b> <br/>
-                                    <input
-                                        onChange={e => this.handleInput(e)}
-                                        name='email'
-                                        value={this.state.email}
-                                        type="text"/><br/>
-                                    <button
-                                    onClick={(e) => {
-                                        e.preventDefault();
-                                        if(this.validInputs()){
-                                            axios.post('/api/booking', this.state)
-                                            .then(res => console.log(res) )
-                                            .catch(err => console.log(err));
-                                        }else {
-                                            console.log('inputs are not valid');
-                                        }
-                                        
-                                    }}
-                                    
-                                    
-                                    >Küldés</button>
-                                </div>
-                                
-                            </form>
-                    </div>          
-
             </section>
                     
         );
     }
 }
+const mapStateToProps = state => ({
+    book: state.book
+})
 
-export default BookingField;
+const mapDispatchToProps = dispatch => {
+    return {
+        setBookData: (data) => dispatch(setBookData(data))
+    }
+}
+
+
+export default connect(mapStateToProps, mapDispatchToProps)(BookingField);

@@ -15,7 +15,7 @@ export class Nav extends Component {
                     <ul>
                         <li><Link to="/">Kezdőlap</Link></li>
                         <li><Link to="/pictures">Képek</Link></li>
-                        <li><Link to="/contact">Kapcsolat</Link></li>
+                        <li><Link to="/book">Foglalás</Link></li>
                     </ul>
                 </div>
                 
