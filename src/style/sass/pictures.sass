@@ -16,6 +16,9 @@
             margin-left: 25px
             margin-bottom: 25px
             cursor: pointer
+            transition: 0.7s
+        img:hover
+            transform: scale(1.05)
 
                 
 #pictures-filterbar
@@ -45,5 +48,33 @@
     width: 100vw
     height: 100vh
     background: rgba(0, 0, 0, 0.5)
+    justify-content: center
+    align-items: center
     img
         width: 1500px
+    #picture-viewer-arrow-prev, #picture-viewer-arrow-next
+        width: 100px
+        height: 100px
+        position: absolute
+        cursor: pointer
+    #picture-viewer-arrow-prev
+        left: 0
+        top: calc( 50% - 50px )
+        transform: rotate(180deg)
+    #picture-viewer-arrow-next
+        right: 0
+        top: calc( 50% - 50px )
+    #picture-viewer-close
+        position: absolute
+        cursor: pointer
+        top: 50px
+        right: 50px
+        font-size: 2rem
+        border: 1px solid red
+        display: flex
+        justify-content: center
+        align-items: center
+        color: red
+        width: 100px
+        height: 100px
+

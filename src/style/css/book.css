@@ -103,6 +103,7 @@ form#other-info {
   display: flex;
   justify-content: space-around;
   align-items: center;
+  margin-bottom: 100px;
 }
 form#other-info .booking-date {
   width: 280px;

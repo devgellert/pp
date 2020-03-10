@@ -7,6 +7,7 @@ import {BrowserRouter as Router, Route ,Switch} from 'react-router-dom';
 
 import store from './redux/store';
 import { Provider } from 'react-redux';
+import Footer from './components/Footer';
 
 
 function App() {
@@ -20,6 +21,7 @@ function App() {
             <Route path="/pictures" component={Pictures}/>
             <Route path="/book" component={Book}/>
           </Switch>
+          <Footer/>
         </Router>
       </Provider>
       
