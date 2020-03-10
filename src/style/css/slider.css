@@ -10,30 +10,6 @@
   background-size: cover;
 }
 
-.show-slide {
-  animation: next-slide 1s;
-}
-
-.hide-slide {
-  animation: hide-slide 1s;
-}
-
-@keyframes next-slide {
-  0% {
-    opacity: 0.1;
-  }
-  100% {
-    opacity: 1;
-  }
-}
-@keyframes hide-slide {
-  0% {
-    opacity: 1;
-  }
-  100% {
-    opacity: 0;
-  }
-}
 @media screen and (max-width: 500px) {
   #slider-wrapper {
     display: none;

@@ -1,7 +1,7 @@
 import React from 'react';
 import Nav from './components/Nav';
 import Home from './components/Home';
-import Pictures from './components/Pictures';
+import Pictures from './components/Pictures/Pictures';
 import Book from './components/Book';
 import {BrowserRouter as Router, Route ,Switch} from 'react-router-dom';
 
