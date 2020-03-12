@@ -4,7 +4,6 @@
     font-family: 'Raleway', sans-serif
     p, .list li
       margin-bottom: 10px
-    
     .horizontal-half-line
       width: 50%
       height: 0
@@ -96,7 +95,7 @@
 
 @media screen and ( max-width: 1000px )
   #about-wrapper
-    width: 100%
+    width: 500px
     h1
       font-size: 1rem
   .react-tabs__tab-list 
@@ -104,3 +103,14 @@
   #why-wrapper
     div
       width: 500px
+
+@media screen and ( max-width: 500px )
+  #about-wrapper
+    width: 300px
+    h1
+      font-size: 1rem
+  .react-tabs__tab-list 
+    flex-direction: column
+  #why-wrapper
+    div
+      width: 300px

@@ -1,9 +1,9 @@
 import React from 'react';
 import Nav from './components/Nav';
-import Home from './components/Home';
+import Home from './components/Home/Home';
 import Pictures from './components/Pictures/Pictures';
-import Book from './components/Book';
-import {BrowserRouter as Router, Route ,Switch} from 'react-router-dom';
+import Book from './components/Book/Book';
+import { BrowserRouter as Router, Route, Switch } from 'react-router-dom';
 
 import store from './redux/store';
 import { Provider } from 'react-redux';

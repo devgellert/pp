@@ -108,7 +108,7 @@
 
 @media screen and (max-width: 1000px) {
   #about-wrapper {
-    width: 100%;
+    width: 500px;
   }
   #about-wrapper h1 {
     font-size: 1rem;
@@ -120,6 +120,22 @@
 
   #why-wrapper div {
     width: 500px;
+  }
+}
+@media screen and (max-width: 500px) {
+  #about-wrapper {
+    width: 300px;
+  }
+  #about-wrapper h1 {
+    font-size: 1rem;
+  }
+
+  .react-tabs__tab-list {
+    flex-direction: column;
+  }
+
+  #why-wrapper div {
+    width: 300px;
   }
 }
 

@@ -12,13 +12,13 @@ const BookingDocu = () => {
                 <p>Foglaljon a mezők kitöltésével, melyet e szövegek alatt talál</p>
 
             </div>
-            <img src={arrowPng}/>
+            <img className="arrow" src={arrowPng}/>
             <div className="single-booking-documentation">
                 <img src={phonePng}/>
                 <p>Ezután a házigazda fel fogja hívni Önöket. Ezért fontos a helyes telefonszám (maximum 2 nap eltéréssel)</p>
                 <p>Vele tudnak egyeztetni a szállással kapcsolatban.</p>
             </div>
-            <img src={arrowPng}/>
+            <img className="arrow" src={arrowPng}/>
             <div className="single-booking-documentation">
                 <img src={carPng}/>
                 <p>Adott nap szombaton délután tudnak érkezni, illetve ugyancsak adott szombaton tudják elhagyni a szállást 10 óráig.</p>

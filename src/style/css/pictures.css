@@ -88,4 +88,18 @@
   height: 100px;
 }
 
+@media screen and (max-width: 1000px) {
+  #pictures-wrapper {
+    width: 500px;
+  }
+
+  #pictures-filterbar {
+    width: 500px;
+  }
+  #pictures-filterbar ul li {
+    display: block;
+    text-align: center;
+  }
+}
+
 /*# sourceMappingURL=pictures.css.map */

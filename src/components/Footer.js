@@ -11,7 +11,7 @@ const Footer = () => {
         <footer>
             <div className="footer-section-wrapper">
                 <div className="footer-section">
-                    <h2>Elérhető tartalmak:</h2>
+                    <h2>Elérhető tartalmak</h2>
                 <ul>
                     <li><Link style={linkStyle} to="/">Kezdőlap</Link></li>
                     <li><Link style={linkStyle} to="/pictures">Képek</Link></li>
@@ -23,6 +23,7 @@ const Footer = () => {
                     <form>
                         <label>Iratkozzon fel a hírlevelünkre!</label><br/>
                         <input placeholder="Email..." type="text"/>
+                        <button>Küld</button>
                     </form>
                 </div>
                 <div className="footer-section">

@@ -1,7 +1,6 @@
 footer {
   width: 100%;
-  height: auto;
-  background: red;
+  height: 200px;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -38,6 +37,28 @@ footer .footer-section-wrapper .footer-section form input {
   border: 0;
   font-size: 1.2rem;
   padding-left: 10px;
+}
+footer .footer-section-wrapper .footer-section form button {
+  width: 80px;
+  height: 40px;
+  margin-left: 5px;
+  border-radius: 5px;
+  background-color: blue;
+  color: white;
+  border: none;
+  cursor: pointer;
+}
+
+@media screen and (max-width: 1000px) {
+  footer {
+    height: auto;
+  }
+  footer .footer-section-wrapper {
+    flex-direction: column;
+  }
+  footer .footer-section-wrapper .footer-section {
+    margin-bottom: 20px;
+  }
 }
 
 /*# sourceMappingURL=footer.css.map */
